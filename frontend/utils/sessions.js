@@ -9,6 +9,14 @@ export const postUser = user => (
 export const postSession = user => (
   $.ajax({
     method: 'post',
-    url: 'api/session'
+    url: 'api/session',
+    data: { user }
+  })
+);
+
+export const deleteSession = () => (
+  $.ajax({
+    method: 'delete',
+    url: '/api/session'
   })
 );
