@@ -14,7 +14,7 @@ class Signup extends React.Component {
   }
 
   handleInput(type) {
-    return () => {
+    return (e) => {
       this.setState({ [type]: e.target.value })
     };
   }
@@ -28,10 +28,10 @@ class Signup extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className="session-form">
         <h2>Sign Up!</h2>
         <form>
-          <label>password:
+          <label>Username:
             <input 
               type="text" 
               value={this.state.username}
